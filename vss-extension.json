@@ -1,0 +1,80 @@
+{
+  "manifestVersion": 1,
+  "version": "1.0.1",
+  "name": "RICE: Four factors for assessing priority",
+  "scopes": [
+    "vso.work",
+    "vso.work_write"
+  ],
+  "description": "VSTS extension that auto calculates RICE and stores it in a field.",
+  "publisher": "mvmjacobs",
+  "id": "rice-extension",
+  "icons": {
+    "default": "marketplace/logo.png"
+  },
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "tags": [
+    "Work Items",
+    "RICE",
+    "Priorization",
+    "Agile",
+    "Backlog",
+    "Product management"
+  ],
+  "content": {
+    "details": {
+      "path": "marketplace/README.md"
+    },
+    "license": {
+      "path": "LICENSE.md"
+    }
+  },
+  "links": {
+    "repository": {
+      "uri": "https://github.com/mvmjacobs/vsts-rice-extension"
+    },
+    "learn": {
+      "uri": "https://github.com/mvmjacobs/vsts-rice-extension"
+    },
+    "support": {
+      "uri": "https://github.com/mvmjacobs/vsts-rice-extension/issues"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "uri": "https://github.com/mvmjacobs/vsts-rice-extension"
+  },
+  "categories": [
+    "Azure Boards"
+  ],
+  "contributions": [
+    {
+      "id": "rice-work-item-form-observer",
+      "type": "ms.vss-work-web.work-item-notifications",
+      "description": "Update the 'RICE Score' field when other fields on the form change.",
+      "targets": [
+        "ms.vss-work-web.work-item-form"
+      ],
+      "properties": {
+        "uri": "src/rice.html"
+      }
+    },
+    {
+      "id": "rice-settings-hub",
+      "type": "ms.vss-web.hub",
+      "description": "Collection level settings experience for managing fields used to calculate RICE.",
+      "targets": [
+        "ms.vss-web.collection-admin-hub-group"
+      ],
+      "properties": {
+        "name": "RICE Settings",
+        "uri": "src/settings.html"
+      }
+    }
+  ],
+  "files": []
+}
